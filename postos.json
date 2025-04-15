@@ -1,0 +1,50 @@
+[
+    {
+        "nome": "Eletroposto EDP & IPIRANGA",
+        "localizacao": "Pirai - RJ",
+        "km": 79,
+        "lat": -22.611,
+        "lon": -43.894,
+        "total_por_tipo": 1
+    },
+    {
+        "nome": "Eletroposto Posto GRAAL Estrela",
+        "localizacao": "Queluz - SP",
+        "km": 183,
+        "lat": -22.536,
+        "lon": -44.784,
+        "total_por_tipo": 1
+    },
+    {
+        "nome": "Eletroposto Posto GRAAL 500",
+        "localizacao": "Guaratinguetá - SP",
+        "km": 235,
+        "lat": -22.798,
+        "lon": -45.191,
+        "total_por_tipo": 1
+    },
+    {
+        "nome": "Eletroposto Posto Arco Iris Aparecida",
+        "localizacao": "Aparecida - SP",
+        "km": 248,
+        "lat": -22.847,
+        "lon": -45.228,
+        "total_por_tipo": 1
+    },
+    {
+        "nome": "Estação de Carregamento para veículos elétricos",
+        "localizacao": "Roseira - SP",
+        "km": 259,
+        "lat": -22.892,
+        "lon": -45.315,
+        "total_por_tipo": 3
+    },
+    {
+        "nome": "BMW EDP – Posto AM/PM Estação - Ipiranga",
+        "localizacao": "Guararema - SP",
+        "km": 362,
+        "lat": -23.412,
+        "lon": -46.033,
+        "total_por_tipo": 1
+    }
+]

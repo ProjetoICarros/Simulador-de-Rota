@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_cedf5bdc70c36480cdbbac4915991716 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_cedf5bdc70c36480cdbbac4915991716" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_cedf5bdc70c36480cdbbac4915991716 = L.map(
+                "map_cedf5bdc70c36480cdbbac4915991716",
+                {
+                    center: [-22.9, -45.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 8,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4a97038a9245f5dd28dc266ebbacb408 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_4a97038a9245f5dd28dc266ebbacb408.addTo(map_cedf5bdc70c36480cdbbac4915991716);
+        
+    
+            var marker_149a44f034267b4d8c27df716d055aaa = L.marker(
+                [-22.611, -43.894],
+                {}
+            ).addTo(map_cedf5bdc70c36480cdbbac4915991716);
+        
+    
+            var icon_5eae6dc3d584d9449ea67d2e2a3a8437 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_149a44f034267b4d8c27df716d055aaa.setIcon(icon_5eae6dc3d584d9449ea67d2e2a3a8437);
+        
+    
+        var popup_f99515c2a78caaf78be17d66c72b5a4a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b374b877eb1d83e231ee5d1f8f739882 = $(`<div id="html_b374b877eb1d83e231ee5d1f8f739882" style="width: 100.0%; height: 100.0%;">Eletroposto EDP & IPIRANGA - Pirai - RJ - 79 km</div>`)[0];
+                popup_f99515c2a78caaf78be17d66c72b5a4a.setContent(html_b374b877eb1d83e231ee5d1f8f739882);
+            
+        
+
+        marker_149a44f034267b4d8c27df716d055aaa.bindPopup(popup_f99515c2a78caaf78be17d66c72b5a4a)
+        ;
+
+        
+    
+    
+            marker_149a44f034267b4d8c27df716d055aaa.bindTooltip(
+                `<div>
+                     Eletroposto EDP & IPIRANGA
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1c2456eaba60b9dc2baf12b95ddc5905 = L.marker(
+                [-22.536, -44.784],
+                {}
+            ).addTo(map_cedf5bdc70c36480cdbbac4915991716);
+        
+    
+            var icon_0f9f227d5d77c92fdb0545890e0d5551 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1c2456eaba60b9dc2baf12b95ddc5905.setIcon(icon_0f9f227d5d77c92fdb0545890e0d5551);
+        
+    
+        var popup_7ae8a750b616ac7b9a287563e4b41d14 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_07f0b53b3b03dd7a39432491343c1f41 = $(`<div id="html_07f0b53b3b03dd7a39432491343c1f41" style="width: 100.0%; height: 100.0%;">Eletroposto Posto GRAAL Estrela - Queluz - SP - 183 km</div>`)[0];
+                popup_7ae8a750b616ac7b9a287563e4b41d14.setContent(html_07f0b53b3b03dd7a39432491343c1f41);
+            
+        
+
+        marker_1c2456eaba60b9dc2baf12b95ddc5905.bindPopup(popup_7ae8a750b616ac7b9a287563e4b41d14)
+        ;
+
+        
+    
+    
+            marker_1c2456eaba60b9dc2baf12b95ddc5905.bindTooltip(
+                `<div>
+                     Eletroposto Posto GRAAL Estrela
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_49ecd8ac944978793a5ad26ca6a1301f = L.marker(
+                [-22.798, -45.191],
+                {}
+            ).addTo(map_cedf5bdc70c36480cdbbac4915991716);
+        
+    
+            var icon_85333074f881b054b4986eb95c4c5dc6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_49ecd8ac944978793a5ad26ca6a1301f.setIcon(icon_85333074f881b054b4986eb95c4c5dc6);
+        
+    
+        var popup_fa45928b958d5f95a0157ebb0275097f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_350d4aba17bbeb956c3c21dc575aaa44 = $(`<div id="html_350d4aba17bbeb956c3c21dc575aaa44" style="width: 100.0%; height: 100.0%;">Eletroposto Posto GRAAL 500 - Guaratinguetá - SP - 235 km</div>`)[0];
+                popup_fa45928b958d5f95a0157ebb0275097f.setContent(html_350d4aba17bbeb956c3c21dc575aaa44);
+            
+        
+
+        marker_49ecd8ac944978793a5ad26ca6a1301f.bindPopup(popup_fa45928b958d5f95a0157ebb0275097f)
+        ;
+
+        
+    
+    
+            marker_49ecd8ac944978793a5ad26ca6a1301f.bindTooltip(
+                `<div>
+                     Eletroposto Posto GRAAL 500
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_042db386c970113e8d275ae9bd17e8a5 = L.marker(
+                [-22.847, -45.228],
+                {}
+            ).addTo(map_cedf5bdc70c36480cdbbac4915991716);
+        
+    
+            var icon_6a7e75331440bb98440ca3cb1b6144a7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_042db386c970113e8d275ae9bd17e8a5.setIcon(icon_6a7e75331440bb98440ca3cb1b6144a7);
+        
+    
+        var popup_745be0e1ba83721193796aaac0aed77e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3bdea85924030d04e50ec21dce70862b = $(`<div id="html_3bdea85924030d04e50ec21dce70862b" style="width: 100.0%; height: 100.0%;">Eletroposto Posto Arco Iris Aparecida - Aparecida - SP - 248 km</div>`)[0];
+                popup_745be0e1ba83721193796aaac0aed77e.setContent(html_3bdea85924030d04e50ec21dce70862b);
+            
+        
+
+        marker_042db386c970113e8d275ae9bd17e8a5.bindPopup(popup_745be0e1ba83721193796aaac0aed77e)
+        ;
+
+        
+    
+    
+            marker_042db386c970113e8d275ae9bd17e8a5.bindTooltip(
+                `<div>
+                     Eletroposto Posto Arco Iris Aparecida
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1df9e8b06672ecd5c0796c6b5cdbad89 = L.marker(
+                [-22.892, -45.315],
+                {}
+            ).addTo(map_cedf5bdc70c36480cdbbac4915991716);
+        
+    
+            var icon_e4176f35cf124dd8078a382ab3be3403 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1df9e8b06672ecd5c0796c6b5cdbad89.setIcon(icon_e4176f35cf124dd8078a382ab3be3403);
+        
+    
+        var popup_8c473860e1983fad5ba67426a9c80936 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cdf896cbee8327b1c15919fb3ac8c5b6 = $(`<div id="html_cdf896cbee8327b1c15919fb3ac8c5b6" style="width: 100.0%; height: 100.0%;">Estação de Carregamento para veículos elétricos - Roseira - SP - 259 km</div>`)[0];
+                popup_8c473860e1983fad5ba67426a9c80936.setContent(html_cdf896cbee8327b1c15919fb3ac8c5b6);
+            
+        
+
+        marker_1df9e8b06672ecd5c0796c6b5cdbad89.bindPopup(popup_8c473860e1983fad5ba67426a9c80936)
+        ;
+
+        
+    
+    
+            marker_1df9e8b06672ecd5c0796c6b5cdbad89.bindTooltip(
+                `<div>
+                     Estação de Carregamento para veículos elétricos
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7e0fcc93979aff5f3d4fa1565c86c76f = L.marker(
+                [-23.412, -46.033],
+                {}
+            ).addTo(map_cedf5bdc70c36480cdbbac4915991716);
+        
+    
+            var icon_ede885fcd6ab89683a0da0526e1a9f09 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_7e0fcc93979aff5f3d4fa1565c86c76f.setIcon(icon_ede885fcd6ab89683a0da0526e1a9f09);
+        
+    
+        var popup_9d7fcc370a138802b2db4b5042a3fa93 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eb65cb55794a97e1b4911477ab9e647e = $(`<div id="html_eb65cb55794a97e1b4911477ab9e647e" style="width: 100.0%; height: 100.0%;">BMW EDP – Posto AM/PM Estação - Ipiranga - Guararema - SP - 362 km</div>`)[0];
+                popup_9d7fcc370a138802b2db4b5042a3fa93.setContent(html_eb65cb55794a97e1b4911477ab9e647e);
+            
+        
+
+        marker_7e0fcc93979aff5f3d4fa1565c86c76f.bindPopup(popup_9d7fcc370a138802b2db4b5042a3fa93)
+        ;
+
+        
+    
+    
+            marker_7e0fcc93979aff5f3d4fa1565c86c76f.bindTooltip(
+                `<div>
+                     BMW EDP – Posto AM/PM Estação - Ipiranga
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>

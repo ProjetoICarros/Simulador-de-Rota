@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Relatório de Análise</title>
+</head>
+<body>
+    <h1>Relatório de Análise de Postos de Recarga</h1>
+    <h2>Média e Desvio Padrão</h2>
+    <p>Média de distância entre postos: {{ analise.media_distancia }} km</p>
+    <p>Desvio padrão das distâncias: {{ analise.desvio_distancia }} km</p>
+
+    <h2>Lacunas Identificadas</h2>
+    {% for lacuna in analise.lacunas %}
+        <p>
+            Posto: {{ lacuna.nome }}<br>
+            Localização: {{ lacuna.localizacao }}<br>
+            Distância ao próximo: {{ lacuna.distancia_prox }} km<br>
+            Sugestão: Adicionar novo ponto em km {{ lacuna.sugestao_km }}
+        </p>
+    {% endfor %}
+
+    <h2>Postos para Melhorar Capacidade</h2>
+    {% for melhoria in analise.melhorias %}
+        <p>
+            Posto: {{ melhoria.nome }}<br>
+            Localização: {{ melhoria.localizacao }}<br>
+            Capacidade Atual: {{ melhoria.total_por_tipo }} carregadores
+        </p>
+    {% endfor %}
+</body>
+</html>
