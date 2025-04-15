@@ -138,5 +138,10 @@ def relatorio():
     analise = analisar_lacunas_e_melhorias(postos_df)
     return render_template("relatorio.html", analise=analise)
 
+@app.route('/adicionar', methods=['GET', 'POST'])
+def adicionar_posto():
+    return render_template("adicionar_posto.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True)
