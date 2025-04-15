@@ -1,0 +1,220 @@
+{
+    "BYD": [
+        {
+            "modelo": "Dolphin Mini",
+            "ano": 2024,
+            "autonomia": 280,
+            "consumo": 0.41,
+            "capacidade": 45
+        },
+        {
+            "modelo": "HAN",
+            "ano": 2024,
+            "autonomia": 349,
+            "consumo": 0.69,
+            "capacidade": 85
+        },
+        {
+            "modelo": "YUAN PLUS",
+            "ano": 2024,
+            "autonomia": 294,
+            "consumo": 0.56,
+            "capacidade": 53
+        }
+    ],
+    "FIAT": [
+        {
+            "modelo": "500E",
+            "ano": 2024,
+            "autonomia": 227,
+            "consumo": 0.46,
+            "capacidade": 43
+        }
+    ],
+    "GWM": [
+        {
+            "modelo": "ORA 03",
+            "ano": 2024,
+            "autonomia": 232,
+            "consumo": 0.52,
+            "capacidade": 55
+        }
+    ],
+    "HYUNDAI": [
+        {
+            "modelo": "Kona EV",
+            "ano": 2024,
+            "autonomia": 252,
+            "consumo": 0.44,
+            "capacidade": 39
+        }
+    ],
+    "JAC": [
+        {
+            "modelo": "EJS4",
+            "ano": 2024,
+            "autonomia": 307,
+            "consumo": 0.47,
+            "capacidade": 56
+        },
+        {
+            "modelo": "E-J7",
+            "ano": 2024,
+            "autonomia": 263,
+            "consumo": 0.5,
+            "capacidade": 50
+        },
+        {
+            "modelo": "EJV5",
+            "ano": 2024,
+            "autonomia": 260,
+            "consumo": 0.63,
+            "capacidade": 45
+        }
+    ],
+    "PEUGEOT": [
+        {
+            "modelo": "E2008",
+            "ano": 2024,
+            "autonomia": 234,
+            "consumo": 0.55,
+            "capacidade": 47
+        },
+        {
+            "modelo": "E-EXPERT",
+            "ano": 2024,
+            "autonomia": 289,
+            "consumo": 0.7,
+            "capacidade": 45
+        }
+    ],
+    "RENAULT": [
+        {
+            "modelo": "ZOE",
+            "ano": 2024,
+            "autonomia": 254,
+            "consumo": 0.66,
+            "capacidade": 38
+        },
+        {
+            "modelo": "E-KWID",
+            "ano": 2024,
+            "autonomia": 180,
+            "consumo": 0.44,
+            "capacidade": 27
+        }
+    ],
+    "VOLVO": [
+        {
+            "modelo": "EX30",
+            "ano": 2024,
+            "autonomia": 338,
+            "consumo": 0.52,
+            "capacidade": 49
+        },
+        {
+            "modelo": "XC40",
+            "ano": 2024,
+            "autonomia": 348,
+            "consumo": 0.62,
+            "capacidade": 69
+        }
+    ],
+    "BMW": [
+        {
+            "modelo": "IX1",
+            "ano": 2024,
+            "autonomia": 303,
+            "consumo": 0.56,
+            "capacidade": 64
+        },
+        {
+            "modelo": "IX2",
+            "ano": 2024,
+            "autonomia": 337,
+            "consumo": 0.57,
+            "capacidade": 64
+        },
+        {
+            "modelo": "I4",
+            "ano": 2024,
+            "autonomia": 335,
+            "consumo": 0.73,
+            "capacidade": 70
+        }
+    ],
+    "AUDI": [
+        {
+            "modelo": "SQ8 E-TRON",
+            "ano": 2024,
+            "autonomia": 307,
+            "consumo": 0.85,
+            "capacidade": 114
+        },
+        {
+            "modelo": "E-TRON GT",
+            "ano": 2024,
+            "autonomia": 308,
+            "consumo": 0.69,
+            "capacidade": 93
+        }
+    ],
+    "JAGUAR": [
+        {
+            "modelo": "I-PACE",
+            "ano": 2024,
+            "autonomia": 298,
+            "consumo": 0.74,
+            "capacidade": 90
+        }
+    ],
+    "MERCEDES": [
+        {
+            "modelo": "EQA250",
+            "ano": 2024,
+            "autonomia": 304,
+            "consumo": 0.62,
+            "capacidade": 66
+        },
+        {
+            "modelo": "EQB350",
+            "ano": 2024,
+            "autonomia": 272,
+            "consumo": 0.69,
+            "capacidade": 66
+        }
+    ],
+    "VW": [
+        {
+            "modelo": "ID.BUZZ",
+            "ano": 2024,
+            "autonomia": 337,
+            "consumo": 0.7,
+            "capacidade": 59
+        }
+    ],
+    "ZEERK": [
+        {
+            "modelo": "X",
+            "ano": 2024
+        }
+    ],
+    "CITROEN": [
+        {
+            "modelo": "E-JUMPY",
+            "ano": 2024,
+            "autonomia": 289,
+            "consumo": 0.7,
+            "capacidade": 75
+        }
+    ],
+    "PORSCHE": [
+        {
+            "modelo": "TAYCAN",
+            "ano": 2024,
+            "autonomia": 241,
+            "consumo": 0.89,
+            "capacidade": 93
+        }
+    ]
+}

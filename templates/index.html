@@ -12,33 +12,6 @@
             
             // Definindo as autonomias, consumos e capacidades de bateria para cada modelo
             const dadosVeiculos = {
-                "byd_dolphin_mini": { autonomia: 280, consumo: 0.41, capacidade: 45 },
-                "fiat_500e": { autonomia: 227, consumo: 0.46, capacidade: 43 },
-                "gwm_ora_03": { autonomia: 232, consumo: 0.52, capacidade: 55 },
-                "hyundai_kona_ev": { autonomia: 252, consumo: 0.44, capacidade: 39 },
-                "jac_ejs4": { autonomia: 307, consumo: 0.47, capacidade: 56 },
-                "peugeot_e2008": { autonomia: 234, consumo: 0.55, capacidade: 47 },
-                "renault_zoe": { autonomia: 254, consumo: 0.66, capacidade: 38 },
-                "volvo_ex30": { autonomia: 338, consumo: 0.52, capacidade: 49 },
-                "bmw_ix1": { autonomia: 303, consumo: 0.56, capacidade: 64 },
-                "bmw_ix2": { autonomia: 337, consumo: 0.57, capacidade: 64 },
-                "audi_sq8_e-tron": { autonomia: 307, consumo: 0.85, capacidade: 114 },
-                "audi_e-tron_gt": { autonomia: 308, consumo: 0.69, capacidade: 93 },
-                "bmw_i4": { autonomia: 335, consumo: 0.73, capacidade: 70 },
-                "byd_han": { autonomia: 349, consumo: 0.69, capacidade: 85 },
-                "jac_e-j7": { autonomia: 263, consumo: 0.50, capacidade: 50 },
-                "jaguar_i-pace": { autonomia: 298, consumo: 0.74, capacidade: 90 },
-                "mercedes_eqa250": { autonomia: 304, consumo: 0.62, capacidade: 66 },
-                "mercedes_eqb350": { autonomia: 272, consumo: 0.69, capacidade: 66 },
-                "vw_id.buzz": { autonomia: 337, consumo: 0.70, capacidade: 59 },
-                "byd_yuan_plus": { autonomia: 294, consumo: 0.56, capacidade: 53 },
-                "zeekr_x": { autonomia: 332, consumo: 0.55, capacidade: 66 },
-                "volvo_xc40": { autonomia: 348, consumo: 0.62, capacidade: 69 },
-                "citroen_e-jumpy": { autonomia: 289, consumo: 0.70, capacidade: 75 },
-                "jac_ejv5": { autonomia: 260, consumo: 0.63, capacidade: 45 },
-                "peugeot_e-expert": { autonomia: 289, consumo: 0.70, capacidade: 45 },
-                "porsche_taycan": { autonomia: 241, consumo: 0.89, capacidade: 93 },
-                "renault_e-kwid": { autonomia: 180, consumo: 0.44, capacidade: 27 },
             };
             
             // Atualizando os campos de autonomia, consumo e capacidade de bateria com os valores correspondentes
@@ -52,37 +25,13 @@
 <body>
     <h1>Simulação de Rotas com Postos de Recarga</h1>
     <form method="post">
-        <!-- Seleção do modelo do veículo -->
+        <!-- Seleção da marca e modelo do veículo -->
+        <label>Marca do Veículo :</label>
+        <select name="modelo" onchange="atualizarAutonomiaEConsumo()">
+        </select><br>
+
         <label>Modelo do Veículo :</label>
         <select name="modelo" onchange="atualizarAutonomiaEConsumo()">
-            <option value="">Selecione o modelo</option>
-            <option value="byd_dolphin_mini">BYD / Dolphin Mini</option>
-            <option value="fiat_500e">FIAT / 500E</option>
-            <option value="gwm_ora_03">GWM / ORA 03</option>
-            <option value="hyundai_kona_ev">HYUNDAI / Kona EV</option>
-            <option value="jac_ejs4">JAC / EJS4</option>
-            <option value="peugeot_e2008">PEUGEOT / E2008</option>
-            <option value="renault_zoe">RENAULT / ZOE</option>
-            <option value="volvo_ex30">VOLVO / EX30</option>
-            <option value="bmw_ix1">BMS / IX1</option>
-            <option value="bmw_ix2">BMW / IX2</option>
-            <option value="audi_sq8_e-tron">AUDI / SQ8 E-TRON</option>
-            <option value="audi_e-tron_gt">AUDI / E-TRON GT</option>
-            <option value="bmw_i4">BMW / I4</option>
-            <option value="byd_han">BYD / HAN</option>
-            <option value="jac_e-j7">JAC / E-J7</option>
-            <option value="jaguar_i-pace">JAGUAR / I-PACE</option>
-            <option value="mercedes_eqa250">MERCEDES / EQA250</option>
-            <option value="mecedes_eqv_eqb350">AUDI / EQB350</option>
-            <option value="vw_id.buzz">VW / ID.BUZZ</option>
-            <option value="byd_yuan_plus">BYD / YUAN PLUS</option>
-            <option value="zeerk_x">ZEERK / X</option>
-            <option value="volvo_xc40">VOLVO / XC40</option>
-            <option value="citroen_e-jumpy">CITROEN / E-JUMPY</option>
-            <option value="jac_ejv5">JAC / EJV5</option>
-            <option value="peugeot_e-expert">PEUGEOT / E-EXPERT</option>
-            <option value="porsche_taycan">PORSCHE / TAYCAN</option>
-            <option value="renault_e-kwid">RENAULT / E-KWID</option>
         </select><br>
         
         <!-- Campo de autonomia preenchido automaticamente -->
@@ -121,6 +70,8 @@
     {% endif %}
     
     <hr>
-<a href="{{ url_for('relatorio') }}">Ver Relatório de Lacunas e Melhorias</a>
+<a href="{{ url_for('relatorio') }}">Ver Relatório de Lacunas e Melhorias</a> 
+<br>
+<a href="{{ url_for('adicionar_posto') }}">Adcionar Novo Posto de Recarga</a>
 </body>
 </html>
