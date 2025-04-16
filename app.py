@@ -3,6 +3,7 @@ import pandas as pd
 import folium
 import bisect
 import json
+import os
 from typing import List, Dict, Any
 
 
@@ -102,35 +103,57 @@ def simular_viagem_com_trafego(
 
 @app.route("/", methods=["GET", "POST"])
 def index():
+    # Carrega os dados dos postos e carros uma única vez
     postos_df = criar_dataframe_postos(postos_data)
+    
+    # Carrega os dados dos carros (com tratamento de erro)
+    try:
+        with open('carros.json', encoding='utf-8') as f:
+            carros = json.load(f)
+    except FileNotFoundError:
+        return "Erro: Arquivo 'carros.json' não encontrado.", 500
+    except json.JSONDecodeError:
+        return "Erro: Formato inválido no arquivo 'carros.json'.", 500
 
     if request.method == "POST":
         try:
+            # Obtém os dados do formulário
             veiculo_autonomia = float(request.form["autonomia"].replace(',', '.'))
             consumo_por_km = float(request.form["consumo"].replace(',', '.'))
             capacidade_bateria = float(request.form["capacidade"].replace(',', '.'))
             condicao_trafego = request.form["trafego"]
-        except ValueError:
-            return "Erro: Insira valores numéricos válidos para autonomia, consumo e capacidade da bateria.", 400
+        except (ValueError, KeyError) as e:
+            return f"Erro nos dados do formulário: {str(e)}", 400
 
+        # Simula a viagem
         pontos_recarga, tempo_total = simular_viagem_com_trafego(
-            veiculo_autonomia=veiculo_autonomia, 
-            consumo_por_km=consumo_por_km, 
-            capacidade_bateria=capacidade_bateria, 
-            condicao_trafego=condicao_trafego, 
+            veiculo_autonomia=veiculo_autonomia,
+            consumo_por_km=consumo_por_km,
+            capacidade_bateria=capacidade_bateria,
+            condicao_trafego=condicao_trafego,
             postos_df=postos_df
         )
 
+        # Cria o mapa
+        mapa_html = "mapa_pontos_recarga_rota.html"
         criar_mapa_com_rota(postos_data, pontos_recarga)
 
         return render_template(
             "index.html",
+            carros=carros,
             pontos_recarga=pontos_recarga,
             tempo_total=tempo_total,
-            mapa="mapa_pontos_recarga_rota.html"
+            mapa=mapa_html
         )
 
-    return render_template("index.html")
+    # Caso GET: mostra o formulário inicial
+    return render_template(
+        "index.html",
+        carros=carros,
+        pontos_recarga=None,
+        tempo_total=None,
+        mapa=None
+    )
 
 @app.route("/relatorio")
 def relatorio():

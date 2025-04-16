@@ -4,22 +4,49 @@
     <meta charset="UTF-8">
     <title>Simulador de Rota de Veículo Elétrico</title>
     <script>
-        function atualizarAutonomiaEConsumo() {
-            const modelo = document.querySelector('select[name="modelo"]').value;
-            const autonomiaInput = document.querySelector('input[name="autonomia"]');
-            const consumoInput = document.querySelector('input[name="consumo"]');
-            const capacidadeInput = document.querySelector('input[name="capacidade"]');
-            
-            // Definindo as autonomias, consumos e capacidades de bateria para cada modelo
-            const dadosVeiculos = {
+    // Dados carregados pelo Flask (já convertidos para JS)
+    const carros = {{ carros|tojson|safe }};
+    const dadosVeiculos = {};
+
+    // Preenche dadosVeiculos para acesso rápido
+    for (const marca in carros) {
+        carros[marca].forEach(carro => {
+            dadosVeiculos[carro.modelo] = {
+                autonomia: carro.autonomia,
+                consumo: carro.consumo,
+                capacidade: carro.capacidade
             };
-            
-            // Atualizando os campos de autonomia, consumo e capacidade de bateria com os valores correspondentes
-            const dados = dadosVeiculos[modelo];
-            autonomiaInput.value = dados ? dados.autonomia : '';
-            consumoInput.value = dados ? dados.consumo.toFixed(2) : ''; // Fraciona o consumo com duas casas decimais
-            capacidadeInput.value = dados ? dados.capacidade : ''; // Preenche a capacidade de bateria
+        });
+    }
+
+    function atualizarModelos() {
+        const marcaSelecionada = document.getElementById('marca').value;
+        const selectModelo = document.getElementById('modelo');
+        
+        selectModelo.innerHTML = '<option value="">Selecione o modelo</option>';
+        
+        if (!marcaSelecionada) return;
+        
+        // Preenche os modelos baseados na marca selecionada
+        carros[marcaSelecionada].forEach(modelo => {
+            const option = document.createElement('option');
+            option.value = modelo.modelo;
+            option.textContent = modelo.modelo;
+            selectModelo.appendChild(option);
+        });
+    }
+
+    function atualizarAutonomiaEConsumo() {
+        const modeloSelecionado = document.getElementById('modelo').value;
+        const dados = dadosVeiculos[modeloSelecionado];
+
+        // Atualiza os campos (se o modelo existir)
+        if (dados) {
+            document.querySelector('input[name="autonomia"]').value = dados.autonomia;
+            document.querySelector('input[name="consumo"]').value = dados.consumo.toFixed(2);
+            document.querySelector('input[name="capacidade"]').value = dados.capacidade;
         }
+    }
     </script>
 </head>
 <body>
@@ -27,11 +54,16 @@
     <form method="post">
         <!-- Seleção da marca e modelo do veículo -->
         <label>Marca do Veículo :</label>
-        <select name="modelo" onchange="atualizarAutonomiaEConsumo()">
+        <select id="marca" onchange="atualizarModelos()">
+            <option value="">Selecione a marca</option>
+            {% for marca in carros %}
+                <option value="{{ marca }}">{{ marca }}</option>
+            {% endfor %}
         </select><br>
-
+        
         <label>Modelo do Veículo :</label>
-        <select name="modelo" onchange="atualizarAutonomiaEConsumo()">
+        <select id="modelo" onchange="atualizarAutonomiaEConsumo()">
+            <option value="">Selecione o modelo</option>
         </select><br>
         
         <!-- Campo de autonomia preenchido automaticamente -->
